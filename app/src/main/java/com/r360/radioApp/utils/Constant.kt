@@ -1,0 +1,18 @@
+package com.r360.radioApp.utils
+
+object Constant {
+    val MINUTES: String="MINUTE"
+    val ResultCodePermission: Int=12
+    const  val ACTION_START_OR_RESUME_SERVICE="ACTION_START_OR_RESUME"
+    const  val ACTION_PAUSE_SERVICE="ACTION_PAUSE_SERVICE"
+    const  val ACTION_STOP_SERVICE="ACTION_STOP_SERVICE"
+
+    const val NOTIFICATION_CHANNEL_ID="tracking_id"
+    const val NOTIFICATION_CHANNEL_NAME="TRACKING"
+    const val NOTIFICATION_ID=1
+    const val ACTION_ACTIVITY_TO_FRAGMENT="ACTION_ACTIVITY_TO_FRAGMENT"
+    val REQUEST_CODE_PERMISSION = 11
+    const val KEY_NAME="NAME"
+    const val KEY_WEIGHT="WEIGHT"
+    const val KEY_FIRST_TIME_TOGGLE_KEY="KEY_FIRST_TIME_TOGGLE_KEY"
+}

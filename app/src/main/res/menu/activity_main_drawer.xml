@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:id="@+id/first_section"
+        android:checkableBehavior="all">
+        <item
+            android:id="@+id/txtHome"
+            android:title="@string/homeText" />
+    </group>
+
+    <group android:id="@+id/second_section"
+        android:checkableBehavior="all">
+        <item
+            android:id="@+id/schedule"
+            android:title="@string/menu_Schedule" />
+    </group>
+
+    <group
+        android:id="@+id/thirdSection"
+        android:checkableBehavior="all">
+
+        <item
+            android:id="@+id/postCast"
+            android:title="@string/menu_Podcast" />
+    </group>
+
+    <group
+        android:id="@+id/fourthSection"
+        android:checkableBehavior="all">
+        <item
+            android:id="@+id/nav_setting"
+            android:title="@string/menu_Setting" />
+    </group>
+
+    <group
+        android:id="@+id/fifthSection"
+        android:checkableBehavior="all">
+        <item
+            android:id="@+id/nav_contactUs"
+            android:title="@string/menu_ContactUs" />
+    </group>
+
+    <group
+        android:id="@+id/sixthSection"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_shop"
+            android:title="@string/menu_Shop" />
+    </group>
+
+    <group
+        android:id="@+id/sevenSection"
+        android:checkableBehavior="all">
+        <item
+            android:id="@+id/nav_PrivacyPolicy"
+            android:title="@string/menu_PrivacyPolicy" />
+    </group>
+    <group
+        android:id="@+id/eightSection"
+        android:checkableBehavior="all">
+        <item
+            android:id="@+id/nav_catchUp"
+            android:title="@string/menu_catchUp" />
+    </group>
+
+</menu>

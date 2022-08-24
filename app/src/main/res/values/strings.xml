@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">R360Radio</string>
+    <string name="title_activity_main2">MainActivity2</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_hoomee"></string>
+    <string name="menu_home">Home</string>
+    <string name="homeText">Home</string>
+    <string name="menu_Schedule">Schedule</string>
+    <string name="menu_Podcast">Podcast</string>
+    <string name="menu_Setting">Setting</string>
+    <string name="menu_ContactUs">Contact Us</string>
+    <string name="menu_Shop">Shop</string>
+    <string name="menu_PrivacyPolicy">Privacy Policy</string>
+    <string name="menu_catchUp">Catch Up</string>
+    <string name="chiristian_radio">Your Number 1 Classic Christian Radio</string>
+    <string name="title_activity_main3">MainActivity3</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+</resources>
