@@ -245,6 +245,6 @@ class MainActivity2 : AppCompatActivity() {
 
     companion object {
         const val RADIO_URL =
-            "https://www.learningcontainer.com/wp-content/uploads/2020/02/Kalimba.mp3"
+            "https://s14.myradiostream.com/29856/listen.mp3"
     }
 }
