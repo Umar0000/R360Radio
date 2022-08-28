@@ -204,6 +204,8 @@ class MainActivity2 : AppCompatActivity() {
         }
 
 
+
+
         binding.appBarMain.contenMain.btnStop.setOnClickListener {
             simpleExoPlayer.playWhenReady = false
             sendCommandService(Constant.ACTION_STOP_SERVICE)
