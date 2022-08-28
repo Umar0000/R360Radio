@@ -5,6 +5,8 @@ import android.net.Uri
 import android.os.Bundle
 import android.view.Menu
 import android.view.View
+import android.view.animation.AlphaAnimation
+import android.view.animation.AnimationUtils
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
@@ -48,6 +50,9 @@ class MainActivity2 : AppCompatActivity() {
             binding.appBarMain.contenMain.btnPlay.isVisible = false
             binding.appBarMain.contenMain.btnStop.isVisible = true
             binding.appBarMain.contenMain.btnPause.isVisible = true
+            binding.appBarMain.contenMain.txt2.text ="Playing"
+            binding.appBarMain.contenMain.txt2.startAnimation(AnimationUtils.loadAnimation(this,R.anim.text_animation))
+
             binding.appBarMain.contenMain.lotifile.playAnimation()
 
         }
@@ -175,8 +180,12 @@ class MainActivity2 : AppCompatActivity() {
 
         binding.appBarMain.contenMain.btnPlay.setOnClickListener {
             prepareMediaPlayer()
+
             simpleExoPlayer.playWhenReady = true
             binding.appBarMain.contenMain.btnPlay.isVisible = false
+
+            binding.appBarMain.contenMain.txt2.startAnimation(AnimationUtils.loadAnimation(this,R.anim.text_animation))
+            binding.appBarMain.contenMain.txt2.text="Playing.."
             binding.appBarMain.contenMain.btnStop.isVisible = true
             binding.appBarMain.contenMain.btnPause.isVisible = true
             binding.appBarMain.contenMain.lotifile.playAnimation()
@@ -187,6 +196,8 @@ class MainActivity2 : AppCompatActivity() {
             simpleExoPlayer.playWhenReady = false
             binding.appBarMain.contenMain.lotifile.pauseAnimation()
             sendCommandService(Constant.ACTION_STOP_SERVICE)
+            binding.appBarMain.contenMain.txt2.text="Station Pause.."
+            binding.appBarMain.contenMain.txt2.startAnimation(AnimationUtils.loadAnimation(this,R.anim.text_animation))
             binding.appBarMain.contenMain.btnPause.isVisible = false
             binding.appBarMain.contenMain.btnStop.isVisible = true
             binding.appBarMain.contenMain.btnPlay.isVisible = true
@@ -196,7 +207,9 @@ class MainActivity2 : AppCompatActivity() {
         binding.appBarMain.contenMain.btnStop.setOnClickListener {
             simpleExoPlayer.playWhenReady = false
             sendCommandService(Constant.ACTION_STOP_SERVICE)
+            binding.appBarMain.contenMain.txt2.text="Station Stopped.."
             binding.appBarMain.contenMain.lotifile.pauseAnimation()
+            binding.appBarMain.contenMain.txt2.startAnimation(AnimationUtils.loadAnimation(this,R.anim.text_animation))
             binding.appBarMain.contenMain.btnStop.isVisible = false
             binding.appBarMain.contenMain.btnPause.isVisible = false
             binding.appBarMain.contenMain.btnPlay.isVisible = true
@@ -247,4 +260,19 @@ class MainActivity2 : AppCompatActivity() {
         const val RADIO_URL =
             "https://s14.myradiostream.com/29856/listen.mp3"
     }
+
+
+//    private fun View.fadeIn(durationMillis: Long = 250) {
+//        this.startAnimation(AlphaAnimation(0F, 1F).apply {
+//            duration = durationMillis
+//            fillAfter = true
+//        })
+//    }
+//
+//    private fun View.fadeOut(durationMillis: Long = 250) {
+//        this.startAnimation(AlphaAnimation(1F, 0F).apply {
+//            duration = durationMillis
+//            fillAfter = true
+//        })
+//    }
 }
