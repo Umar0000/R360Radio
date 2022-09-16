@@ -240,7 +240,7 @@ class MainActivity2 : AppCompatActivity() {
         }
 
         binding.appBarMain.contenMain.btnR360.setOnClickListener {
-            Toast.makeText(applicationContext, "Radio R360", Toast.LENGTH_SHORT).show()
+            Toast.makeText(applicationContext, "R360 Radio", Toast.LENGTH_SHORT).show()
             goToBrowser("https://www.r360radio.co.uk/")
         }
 

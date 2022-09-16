@@ -16,7 +16,7 @@
         android:layout_height="match_parent"
         android:src="@drawable/bg2"
         android:tintMode="src_atop"
-        android:scaleType="centerCrop"
+        android:scaleType="fitXY"
         app:tint="#36000000" />
 
     <com.google.android.material.appbar.AppBarLayout

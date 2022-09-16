@@ -41,7 +41,7 @@ class ServiceModule {
         .setOngoing(true)
         .setSmallIcon(R.drawable.rlogo)
         .setAutoCancel(false)
-        .setContentTitle("Radio 360")
+        .setContentTitle("R360 Radio")
         .setContentIntent(pendingIntent)
 
 
