@@ -3,33 +3,12 @@ package com.r360.radioApp.ui.service
 import android.annotation.SuppressLint
 import android.app.*
 import android.app.NotificationManager.IMPORTANCE_HIGH
-import android.app.NotificationManager.IMPORTANCE_LOW
-import android.content.Context
 import android.content.Intent
-import android.graphics.Bitmap
-import android.net.Uri
-import android.os.Binder
 import android.os.Build
-import android.os.IBinder
-import android.util.Log
 import androidx.annotation.RequiresApi
 import androidx.core.app.NotificationCompat
 import androidx.lifecycle.LifecycleService
 import com.google.android.exoplayer2.ExoPlayer
-import com.google.android.exoplayer2.MediaItem
-import com.google.android.exoplayer2.Player
-import com.google.android.exoplayer2.SimpleExoPlayer
-import com.google.android.exoplayer2.extractor.DefaultExtractorsFactory
-import com.google.android.exoplayer2.source.ConcatenatingMediaSource
-import com.google.android.exoplayer2.source.DefaultMediaSourceFactory
-import com.google.android.exoplayer2.source.ProgressiveMediaSource
-import com.google.android.exoplayer2.ui.PlayerNotificationManager
-import com.google.android.exoplayer2.upstream.DataSource
-import com.google.android.exoplayer2.upstream.DefaultDataSource
-import com.google.android.exoplayer2.upstream.DefaultDataSourceFactory
-import com.google.android.exoplayer2.util.Util
-import com.r360.radioApp.MainActivity2
-import com.r360.radioApp.R
 import com.r360.radioApp.utils.Constant.ACTION_PAUSE_SERVICE
 import com.r360.radioApp.utils.Constant.ACTION_START_OR_RESUME_SERVICE
 import com.r360.radioApp.utils.Constant.ACTION_STOP_SERVICE
@@ -37,9 +16,6 @@ import com.r360.radioApp.utils.Constant.NOTIFICATION_CHANNEL_ID
 import com.r360.radioApp.utils.Constant.NOTIFICATION_CHANNEL_NAME
 import com.r360.radioApp.utils.Constant.NOTIFICATION_ID
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @AndroidEntryPoint

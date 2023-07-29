@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity2">
+    tools:context=".screens.MainActivity2">
 
 
 <!--    <ImageView-->
@@ -35,14 +35,7 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <ImageView
-        android:id="@+id/ic_btn"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
 
-        android:src="@drawable/ic_side_menu"/>
     <include layout="@layout/content_main"
         android:id="@+id/contenMain"/>
 

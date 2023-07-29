@@ -4,7 +4,7 @@ import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
 import androidx.core.app.NotificationCompat
-import com.r360.radioApp.MainActivity2
+import com.r360.radioApp.screens.MainActivity2
 import com.r360.radioApp.R
 import com.r360.radioApp.utils.Constant
 
@@ -14,7 +14,6 @@ import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ServiceComponent
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.android.scopes.ServiceScoped
-import javax.inject.Singleton
 
 
 @Module

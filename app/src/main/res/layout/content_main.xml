@@ -19,26 +19,37 @@
         app:layout_constraintTop_toTopOf="parent"
         app:navGraph="@navigation/mobile_navigation" />
 
-    <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/lotifile"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginEnd="10dp"
-        android:layout_alignParentRight="true"
-        android:fitsSystemWindows="true"
-        app:lottie_autoPlay="true"
-        app:lottie_loop="true"
-        app:lottie_rawRes="@raw/equalizer" />
+
+    <com.denzcoskun.imageslider.ImageSlider
+        android:id="@+id/image_slider"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        app:iss_auto_cycle="true"
+        app:iss_period="5000"
+        android:layoutDirection="ltr"
+        app:iss_delay="5000"
+        app:iss_text_align="CENTER"/>
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_below="@+id/image_slider"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/rlogo" />
 
     <TextView
+        android:id="@+id/headingLine"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:layout_below="@+id/lotifile"
+        android:layout_below="@+id/profile_image"
+        android:layout_marginTop="10dp"
         android:text="@string/chiristian_radio"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="18sp"
+        android:textSize="23sp"
         android:textStyle="bold"
         tools:ignore="MissingConstraints" />
 
@@ -46,115 +57,224 @@
         android:id="@+id/btnLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/headingLine"
         android:layout_centerInParent="true"
         android:orientation="horizontal">
 
         <Button
             android:id="@+id/btnPlay"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
             android:background="@drawable/btnplay"
-            android:visibility="visible" />
+            android:visibility="visible"
+            tools:ignore="SpeakableTextPresentCheck" />
 
         <Button
             android:id="@+id/btnPause"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
             android:background="@drawable/btn_pause"
-            android:visibility="gone" />
+            android:visibility="gone"
+            tools:ignore="SpeakableTextPresentCheck" />
 
 
-        <Button
-            android:id="@+id/btnStop"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="20dp"
-            android:background="@drawable/btnstop"
-            android:visibility="gone" />
+        <!--        <Button-->
+        <!--            android:id="@+id/btnStop"-->
+        <!--            android:layout_width="40dp"-->
+        <!--            android:layout_height="40dp"-->
+        <!--            android:layout_marginStart="20dp"-->
+        <!--            android:background="@drawable/btnstop"-->
+        <!--            android:visibility="gone" />-->
 
 
     </LinearLayout>
 
 
-    <TextView
-        android:id="@+id/txt2"
+    <!--    <TextView-->
+    <!--        android:id="@+id/txt2"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_below="@+id/btnLayout"-->
+    <!--        android:layout_marginTop="30dp"-->
+    <!--        android:text="R360 Radio will be right back soon."-->
+    <!--        android:textAlignment="center"-->
+    <!--        android:textColor="@color/white"-->
+    <!--        android:textSize="16sp"-->
+    <!--        android:textStyle="bold"-->
+    <!--        tools:ignore="MissingConstraints" />-->
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/txt3"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="10dp"-->
+    <!--        android:text="R360 Radio"-->
+    <!--        android:textSize="14sp"-->
+    <!--        android:textStyle="bold"-->
+    <!--        android:textAlignment="center"-->
+    <!--        android:textColor="@color/white"-->
+    <!--        tools:ignore="MissingConstraints" />-->
+
+    <HorizontalScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/btnLayout"
-        android:layout_marginTop="30dp"
-        android:text="R360 Radio will be right back soon."
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        tools:ignore="MissingConstraints" />
+        android:layout_above="@+id/menuLayout"
+        android:layout_marginStart="5dp"
 
-    <TextView
-        android:id="@+id/txt3"
+        android:layout_marginEnd="5dp">
+
+        <LinearLayout
+            android:id="@+id/socialIconLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+
+
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:id="@+id/btnFacebook"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/facebook"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/btnInstagram"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="5dp"
+                android:background="@drawable/instagram"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/btnTikTok"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="5dp"
+                android:background="@drawable/ic_tiktok"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/btnR360"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="5dp"
+                android:background="@drawable/rlogo"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/btnYouTube"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="5dp"
+                android:background="@drawable/youtube"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/btnTwitter"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/twitter"
+                android:visibility="visible" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <HorizontalScrollView
+        android:id="@+id/menuLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/txt2"
-        android:layout_marginTop="10dp"
-        android:text="R360 Radio"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        tools:ignore="MissingConstraints" />
+        android:layout_above="@+id/tagLineLayour"
+        android:padding="10dp">
+
+        <LinearLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal"
+
+            android:weightSum="5"
+
+            >
 
 
+            <ImageView
+                android:id="@+id/ic_btn"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_side_menu" />
+
+            <TextView
+                android:id="@+id/podcast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10sp"
+                android:text="@string/podcast"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/livePlay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10sp"
+                android:text="Live playlist"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/recentList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10sp"
+                android:text="Recently \n playlist"
+                android:textColor="@color/white"
+                android:textSize="16dp" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lotifile"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:fitsSystemWindows="true"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/equalizer" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
 
     <LinearLayout
+        android:id="@+id/tagLineLayour"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
-        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
         android:gravity="center"
-        android:layout_marginBottom="90dp">
+        android:orientation="horizontal"
 
+        >
 
-
-        <ImageView
-            android:id="@+id/btnFacebook"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="10dp"
-            android:background="@drawable/facebook"
-            android:visibility="visible" />
-
-        <ImageView
-            android:id="@+id/btnInstagram"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="10dp"
-            android:background="@drawable/instagram"
-            android:visibility="visible" />
-        <ImageView
-            android:id="@+id/btnR360"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="10dp"
-            android:background="@drawable/rlogo"
-            android:visibility="visible" />
-
-        <ImageView
-            android:id="@+id/btnYouTube"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="10dp"
-            android:background="@drawable/youtube"
-            android:visibility="visible" />
-
-        <ImageView
-            android:id="@+id/btnTwitter"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="10dp"
-            android:background="@drawable/twitter"
-            android:visibility="visible" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="For Advert &amp; any other enquiries:\n studio@r360radio.co.uk"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
 
     </LinearLayout>
 
